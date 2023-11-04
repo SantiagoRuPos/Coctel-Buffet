@@ -1,0 +1,7 @@
+{
+  "name": "Coctel-Buffet",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
