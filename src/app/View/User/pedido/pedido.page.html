@@ -1,0 +1,39 @@
+<div id="contenedor" class="container">
+  <ion-card>
+  <ion-toolbar>
+    <ion-title>Nuevo Pedido</ion-title>
+  </ion-toolbar>
+
+
+  <ion-item>
+    <ion-label>Selecciona el licor:</ion-label>
+    <ion-select placeholder="Licor" [(ngModel)]="selectedLiquors" multiple="true" (click)="verificarSeleccionLicores()">
+      <ion-select-option *ngFor="let liquor of liquorOptions" [value]="liquor">{{ liquor }}</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Selecciona los acompañantes:</ion-label>
+    <ion-select placeholder="Acompañantes" [(ngModel)]="selectedAccompaniments" multiple="true" >
+      <ion-select-option *ngFor="let accompaniment of accompanimentOptions" [value]="accompaniment">{{ accompaniment }}</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Quieres la guia de un Bartender ?</ion-label>
+    <ion-checkbox [(ngModel)]="helpFromBartender" (ionChange)="toggleBartenderHelp()"></ion-checkbox>
+  </ion-item>
+
+  <div class="center-buttons">
+    <button type="button" class="btn btn-success button-icon" (click)="ContinuarPedido()">
+      <span class="material-symbols-outlined" >shopping_cart</span>Continuar con el Pedido
+    </button>
+    <button  type="button" class="btn btn-danger button-icon">
+      <span class="material-symbols-outlined">cancel</span>Cancelar Pedido
+    </button>
+  </div>
+
+
+  <br>
+  </ion-card>
+  </div>

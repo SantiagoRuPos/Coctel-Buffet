@@ -1,0 +1,61 @@
+<div id="contenedor" class="container">
+  <ion-card>
+    <ion-toolbar>
+      <ion-title>Confirmar Pedido</ion-title>
+    </ion-toolbar>
+
+    <!-- Descripción del pedido -->
+    <ion-item>
+      <ion-label>Descripción pedido:</ion-label>
+
+
+    </ion-item>
+
+    <!-- Guía de bartender -->
+    <ion-item>
+      <ion-label>Guía de bartender:</ion-label>
+      <!-- Utiliza ngModel para enlazar la ayuda del bartender -->
+      <ion-checkbox [(ngModel)]="bartenderHelp" disabled></ion-checkbox>
+    </ion-item>
+
+    <!-- Licores seleccionados -->
+    <ion-item *ngIf="liquors.length > 0">
+
+      <ion-select multiple [(ngModel)]="liquors" disabled>
+        <ion-select-option *ngFor="let liquor of liquors" [value]="liquor">{{ liquor }}</ion-select-option>
+      </ion-select>
+      <ion-select multiple [(ngModel)]="accompaniments" disabled>
+        <ion-select-option *ngFor="let accompaniment of accompaniments" [value]="accompaniment">{{ accompaniment }}</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Dirección de entrega:</ion-label>
+      <ion-input [(ngModel)]="order.deliveryAddress" placeholder="Ingrese la dirección"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Método de Pago:</ion-label>
+      <ion-select [(ngModel)]="paymentMethod" placeholder="Seleccione el método de pago">
+        <ion-select-option *ngFor="let method of MetodoPago" [value]="method">{{ method }}</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <!-- Botones de confirmación y edición -->
+    <div class="center-buttons">
+      <button type="button" class="btn btn-success button-icon" (click)="HacerPedido()">
+        <span class="material-symbols-outlined">check_circle</span>Confirmar Pedido
+      </button>
+      <button type="button" class="btn btn-warning button-icon" (click)="ediatPedido()">
+        <span class="material-symbols-outlined">edit</span>Editar Pedido
+      </button>
+    </div>
+
+    <br>
+  </ion-card>
+</div>
+
+
+
+
+
+
+

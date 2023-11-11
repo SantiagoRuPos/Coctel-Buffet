@@ -24,3 +24,10 @@
 @import "@ionic/angular/css/text-alignment.css";
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
+
+body {
+  background-image: url('assets/resources/Fondo\ 1.jpeg'); /* Ruta de tu imagen de fondo */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}

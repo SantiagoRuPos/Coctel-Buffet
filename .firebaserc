@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "cotelbd": {
+      "hosting": {
+        "app": [
+          "cotelbd"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "cotelbd"
+  }
+}

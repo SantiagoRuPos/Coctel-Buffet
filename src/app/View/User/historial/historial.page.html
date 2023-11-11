@@ -1,0 +1,29 @@
+<div class="container">
+  <ion-card>
+<ion-card-header>
+  <ion-card-title> <span class="material-symbols-outlined">history</span> Historial de pedidos</ion-card-title>
+</ion-card-header>
+<ion-button color="success" style="width: 25px; height: 25px;" class="material-symbols-outlined" (click)="volver()">
+  arrow_back
+  </ion-button>
+
+  <ion-grid>
+    <ion-row class="header-row">
+      <ion-col>Nombre de Pedido</ion-col>
+      <ion-col>Total Pagado</ion-col>
+      <ion-col>Descripción</ion-col>
+      <ion-col>Dirección de Entrega</ion-col>
+      <ion-col>Fecha de Entrega</ion-col>
+    </ion-row>
+    <ion-row *ngFor="let order of orders">
+      <ion-col>{{ order.name }}</ion-col>
+      <ion-col>{{ order.total }}</ion-col>
+      <ion-col>{{ order.description }}</ion-col>
+      <ion-col>{{ order.deliveryAddress }}</ion-col>
+      <ion-col>{{ order.date }}</ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-card>
+
+</div>
