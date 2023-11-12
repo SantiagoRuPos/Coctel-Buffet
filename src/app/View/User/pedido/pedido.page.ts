@@ -45,6 +45,9 @@ export class PedidoPage implements OnInit {
 
 
   }
+  Cancelar(){
+    this.router.navigate(['User']);
+  }
   verificarSeleccionLicores() {
     if (this.selectedLiquors.length > 1) {
       this.Advertencia();
