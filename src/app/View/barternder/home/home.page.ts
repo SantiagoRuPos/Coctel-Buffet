@@ -22,4 +22,7 @@ export class HomePage implements OnInit {
   Perfil(){
     this.router.navigate(['perfil']);
   }
+  Salir(){
+    this.router.navigate(['Login']);
+  }
 }

@@ -20,5 +20,9 @@ export class HomePage  {
 
 
 }
+Salir(){
+
+  this.router.navigate(['Login']);
+}
 
 }
