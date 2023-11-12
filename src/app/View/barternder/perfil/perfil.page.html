@@ -1,0 +1,29 @@
+<div class="container">
+  <ion-card>
+    <ion-header>
+      <ion-card-title>Mi perfil</ion-card-title><br>
+    </ion-header>
+
+    <ion-card-content>
+      <ion-avatar class="profile-avatar">
+        <img src="{{ userProfile.picture }}" alt="Perfil">
+      </ion-avatar>
+      <ion-label>
+        <h2>{{ userProfile.name }}</h2>
+        <p>{{ userProfile.email }}</p>
+      </ion-label>
+      <ion-row class="rating">
+        <ion-col>
+          <ion-icon *ngFor="let star of stars" name="{{ star }}"></ion-icon>
+        </ion-col>
+      </ion-row>
+      <ion-row class="menu-buttons">
+        <ion-col>
+          <ion-button expand="full" (click)="Volver()">Volver</ion-button>
+        </ion-col>
+      </ion-row>
+
+
+    </ion-card-content>
+  </ion-card>
+</div>

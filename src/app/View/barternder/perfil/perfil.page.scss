@@ -1,0 +1,54 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+ion-card {
+  max-width: 400px;
+  width: 100%;
+  text-align: center; /* Alinea el texto en el centro */
+}
+
+ion-card-title {
+  font-size: 1.5em;
+}
+
+ion-avatar {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+}
+
+.profile-avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+ion-label {
+  text-align: center;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px; /* Ajuste para dar espacio entre la calificación y los botones */
+
+  ion-icon {
+    font-size: 24px;
+    color: #f8d825; /* Color amarillo para las estrellas */
+    margin: 0 2px; /* Ajuste para dar espacio entre las estrellas */
+  }
+}
+
+.menu-buttons {
+  margin-top: 20px;
+}
+
+ion-button {
+  margin-bottom: 10px;
+}

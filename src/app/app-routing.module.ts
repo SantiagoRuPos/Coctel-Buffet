@@ -54,6 +54,24 @@ const routes: Routes = [
     loadChildren: () => import('./View/User/confirmar-pedido/confirmar-pedido.module').then( m => m.ConfirmarPedidoPageModule)
   },
   {
+    path: 'nuevo',
+    loadChildren: () => import('./View/barternder/nuevo/nuevo.module').then( m => m.NuevoPageModule)
+
+
+  },
+  {
+    path: 'perfil',
+    loadChildren: () => import('./View/barternder/perfil/perfil.module').then( m => m.PerfilPageModule)
+
+
+  },
+  {
+    path: 'historial-top',
+    loadChildren: () => import('./View/barternder/historial/historial.module').then( m => m.HistorialPageModule)
+
+
+  },
+  {
     path: '',
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
@@ -61,6 +79,7 @@ const routes: Routes = [
     path: '**',
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
+
 
 
 
