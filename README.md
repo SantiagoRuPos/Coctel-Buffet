@@ -1,2 +1,2 @@
 # Coctel-Buffet
-#recuerda tner ionic instalado
+#recuerda tener ionic instalado
